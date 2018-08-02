@@ -15,6 +15,8 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
+from django.conf.urls.static import STATIC_ROOT
+from django.conf import settings
 from django.views.generic.base import TemplateView
 
 
