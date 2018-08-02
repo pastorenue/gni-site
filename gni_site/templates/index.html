@@ -1,0 +1,783 @@
+<!doctype html>
+{% load static %}
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <title>Grin Net Innovations | {% block title %}Home{% endblock %}</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" type="image/png" href="{% static 'images/logo.png' %}">
+
+        <!--Google Font link-->
+        <link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+
+        <link rel="stylesheet" href="{% static 'css/slick/slick.css' %}"> 
+        <link rel="stylesheet" href="{% static 'css/slick/slick-theme.css' %}">
+        <link rel="stylesheet" href="{% static 'css/animate.css' %}">
+        <link rel="stylesheet"  href="{% static 'css/iconfont.css' %}">
+        <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+        <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+        <link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}">
+        <link rel="stylesheet" href="{% static 'css/bootsnav.css' %}">
+        {% block extracss %}{% endblock %}
+
+        <!-- xsslider slider css -->
+
+
+        <!--<link rel="stylesheet" href="assets/css/xsslider.css">-->
+
+
+
+
+        <!--For Plugins external css-->
+        <!--<link rel="stylesheet" href="assets/css/plugins.css" />-->
+
+        <!--Theme custom css -->
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+        <!--<link rel="stylesheet" href="assets/css/colors/maron.css">-->
+
+        <!--Theme Responsive css-->
+        <link rel="stylesheet" href="{% static 'css/responsive.css' %}" />
+
+        <script src="{% static 'js/vendor/modernizr-2.8.3-respond-1.4.2.min.js' %}"></script>
+    </head>
+
+    <body data-spy="scroll" data-target=".navbar-collapse">
+
+
+        <!-- Preloader -->
+        <div id="loading">
+            <div id="loading-center">
+                <div id="loading-center-absolute">
+                    <div class="object" id="object_one"></div>
+                    <div class="object" id="object_two"></div>
+                    <div class="object" id="object_three"></div>
+                    <div class="object" id="object_four"></div>
+                </div>
+            </div>
+        </div><!--End off Preloader -->
+
+
+        <div class="culmn">
+            <!--Home page style-->
+
+
+            <nav class="navbar navbar-default bootsnav navbar-fixed">
+                <div class="navbar-top bg-grey fix">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-9">
+                                <div class="navbar-callus text-left sm-text-center">
+                                    <ul class="list-inline">
+                                        <li><a href=""><i class="fa fa-phone"></i> NIG: 07080069829</a></li>
+                                        <li><a href=""><i class="fa fa-phone"></i> CYPRUS: +905338826571</a></li>
+                                        <li><a href=""><i class="fa fa-phone"></i> UAE: +971 505728643</a></li>
+                                        <li><a href=""><i class="fa fa-envelope-o"></i> info@grinnetinnovations.com</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="navbar-socail text-right sm-text-center">
+                                    <ul class="list-inline">
+                                        <li><a href=""><i class="fa fa-facebook"></i></a></li>
+                                        <li><a href=""><i class="fa fa-twitter"></i></a></li>
+                                        <li><a href=""><i class="fa fa-linkedin"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Start Top Search -->
+                <div class="top-search">
+                    <div class="container">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-search"></i></span>
+                            <input type="text" class="form-control" placeholder="Search">
+                            <span class="input-group-addon close-search"><i class="fa fa-times"></i></span>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Top Search -->
+
+
+                <div class="container"> 
+                    <div class="attr-nav">
+                        <ul>
+                            <li class="search"><a href="#"><i class="fa fa-search"></i></a></li>
+                        </ul>
+                    </div> 
+
+                    <!-- Start Header Navigation -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <a class="navbar-brand" href="#brand">
+                            <img src="{% static 'images/logo.png' %}" class="logo" alt="" style="width: 230px;">
+                            <!--<img src="assets/images/footer-logo.png" class="logo logo-scrolled" alt="">-->
+                        </a>
+
+                    </div>
+                    <!-- End Header Navigation -->
+
+                    <!-- navbar menu -->
+                    <div class="collapse navbar-collapse" id="navbar-menu">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="#home">Home</a></li>                    
+                            <li><a href="#features">About</a></li>
+                            <li><a href="#business">Services</a></li>
+                            <li><a href="#work">Events/Conferences</a></li>
+                            <li><a href="#test">Blog</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </div><!-- /.navbar-collapse -->
+                </div> 
+
+            </nav>
+            {% block slider %}
+            <!--Home Sections-->
+
+            <section id="home" class="home bg-black fix">
+                <div class="overlay"></div>
+                <div class="container">
+                    <div class="row">
+                        <div class="main_home text-center">
+                            <div class="col-md-12">
+                                <div class="hello_slid">
+                                    <div class="slid_item">
+                                        <div class="home_text ">
+                                            <h2 class="text-white">Welcome to <strong>Grin Net Innovations</strong></h2>
+                                            <h1 class="text-white">We Do Business All Of Time</h1>
+                                            <h3 class="text-white">- We Create a <strong>Concept</strong> into The Market -</h3>
+                                        </div>
+
+                                        <div class="home_btns m-top-40">
+                                            <a href="" class="btn btn-primary m-top-20">SIGN UP FOR A NEWSLETTER </a>
+                                            <a href="" class="btn btn-default m-top-20">Take a Tour</a>
+                                        </div>
+                                    </div><!-- End off slid item -->
+                                    <div class="slid_item">
+                                        <div class="home_text ">
+                                            <h2 class="text-white">This is <strong>GNI</strong></h2>
+                                            <h1 class="text-white">Giving Value for the facets of humanity</h1>
+                                            <h3 class="text-white">-Excellent Delivery is our <strong>MANTRA</strong> -</h3>
+                                        </div>
+
+                                        <div class="home_btns m-top-40">
+                                            <a href="" class="btn btn-info m-top-20">Hear it from the FOUNDER</a>
+                                        </div>
+                                    </div><!-- End off slid item -->
+                                    <div class="slid_item">
+                                        <div class="home_text ">
+                                            <h2 class="text-white">Welcome to <strong>Made</strong></h2>
+                                            <h1 class="text-white">We Do Business All Of Time</h1>
+                                            <h3 class="text-white">- We Create a <strong>Concept</strong> into The Market -</h3>
+                                        </div>
+
+                                        <div class="home_btns m-top-40">
+                                            <a href="" class="btn btn-danger m-top-20">Book an Appointment</a>
+                                            <a href="" class="btn btn-default m-top-20">Take a Tour</a>
+                                        </div>
+                                    </div><!-- End off slid item -->
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                    </div><!--End off row-->
+                </div><!--End off container -->
+            </section> <!--End off Home Sections-->
+            {% endblock %}
+
+            {% block content %}
+            <!--Featured Section-->
+            <section id="features" class="features">
+                <div class="container">
+                    <div class="row">
+                        <div class="main_features fix roomy-70">
+                            <div class="col-md-4">
+                                <div class="features_item sm-m-top-30">
+                                    <div class="f_item_icon">
+                                        <i class="fa fa-thumbs-o-up"></i>
+                                    </div>
+                                    <div class="f_item_text">
+                                        <h3>Best Quality Design</h3>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipiscing elit pellentesque eleifend
+                                            in sit amet mattis volutpat rhoncus.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="features_item sm-m-top-30">
+                                    <div class="f_item_icon">
+                                        <i class="fa fa-tablet"></i>
+                                    </div>
+                                    <div class="f_item_text">
+                                        <h3>Responsive Design</h3>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipiscing elit pellentesque eleifend
+                                            in sit amet mattis volutpat rhoncus.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="features_item sm-m-top-30">
+                                    <div class="f_item_icon">
+                                        <i class="fa fa-sliders"></i>
+                                    </div>
+                                    <div class="f_item_text">
+                                        <h3>Easy to Customize</h3>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipiscing elit pellentesque eleifend
+                                            in sit amet mattis volutpat rhoncus.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- End off row -->
+                </div><!-- End off container -->
+            </section><!-- End off Featured Section-->
+
+
+            <!--Business Section-->
+            <section id="business" class="business bg-grey roomy-70">
+                <div class="container">
+                    <div class="row">
+                        <div class="main_business">
+                            <div class="col-md-6">
+                                <div class="business_slid">
+                                    <div class="slid_shap bg-grey"></div>
+                                    <div class="business_items text-center">
+                                        <div class="business_item">
+                                            <div class="business_img">
+                                                <img src="{% static 'images/about-img1.jpg' %}" alt="" />
+                                            </div>
+                                        </div>
+
+                                        <div class="business_item">
+                                            <div class="business_img">
+                                                <img src="{% static 'images/about-img1.jpg' %}" alt="" />
+                                            </div>
+                                        </div>
+
+                                        <div class="business_item">
+                                            <div class="business_img">
+                                                <img src="{% static 'images/about-img1.jpg' %}" alt="" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-6">
+                                <div class="business_item sm-m-top-50">
+                                    <h2 class="text-uppercase"><strong>GNI</strong>: Template For Entrepreneurs</h2>
+                                    <ul>
+                                        <li><i class="fa fa-arrow-circle-right"></i> Creative Business Concepts</li>
+                                        <li><i class="fa  fa-arrow-circle-right"></i> Avoiding the Killer Bees of Business</li>
+                                        <li><i class="fa  fa-arrow-circle-right"></i> Innovative Business Ideas</li>
+                                    </ul>
+                                    <p class="m-top-20">At <strong>GRIN NET INNOVATIONS</strong> we see things differently, 
+                                        we look at the realities of life and try to let the younger generations see a need to become 
+                                        entrepreneurs especially in Africa, Asia and the Middle East. We bring skills, 
+                                        business conferences, and empowerment to everyone which has made us stand out 
+                                        among so many organizations. At Grin Net Innovations, We inspire lives… </p>
+
+                                    <div class="business_btn">
+                                        <a href="#" class="btn btn-default m-top-20">Read More</a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section><!-- End off Business section -->
+
+
+            <!--product section-->
+            <section id="product" class="product">
+                <div class="container">
+                    <div class="main_product roomy-80">
+                        <div class="head_title text-center fix">
+                            <h2 class="text-uppercase">Our Products and Services</h2>
+                            <h5>Giving the best consultation services, is our specialty</h5>
+                        </div>
+
+                        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                            <!-- Indicators -->
+                            <ol class="carousel-indicators">
+                                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                            </ol>
+
+                            <!-- Wrapper for slides -->
+                            <div class="carousel-inner" role="listbox">
+                                <div class="item active">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-sm-3">
+                                                <div class="port_item xs-m-top-30">
+                                                    <div class="port_img">
+                                                        <img src="{% static 'images/work-img1.jpg' %}" alt="" />
+                                                        <div class="port_overlay text-center">
+                                                            <a href="{% static 'images/work-img1.jpg' %}" class="popup-img">+</a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="port_caption m-top-20">
+                                                        <h5>Your Work Title</h5>
+                                                        <h6>- Graphic Design</h6>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-3">
+                                                <div class="port_item xs-m-top-30">
+                                                    <div class="port_img">
+                                                        <img src="{% static 'images/work-img2.jpg' %}" alt="" />
+                                                        <div class="port_overlay text-center">
+                                                            <a href="a{% static 'images/work-img2.jpg' %}" class="popup-img">+</a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="port_caption m-top-20">
+                                                        <h5>Your Work Title</h5>
+                                                        <h6>- Graphic Design</h6>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-3">
+                                                <div class="port_item xs-m-top-30">
+                                                    <div class="port_img">
+                                                        <img src="{% static 'images/work-img3.jpg' %}" alt="" />
+                                                        <div class="port_overlay text-center">
+                                                            <a href="{% static 'images/work-img3.jpg' %}" class="popup-img">+</a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="port_caption m-top-20">
+                                                        <h5>Your Work Title</h5>
+                                                        <h6>- Graphic Design</h6>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-3">
+                                                <div class="port_item xs-m-top-30">
+                                                    <div class="port_img">
+                                                        <img src="{% static 'images/work-img4.jpg' %}" alt="" />
+                                                        <div class="port_overlay text-center">
+                                                            <a href="{% static 'images/work-img4.jpg' %}" class="popup-img">+</a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="port_caption m-top-20">
+                                                        <h5>Your Work Title</h5>
+                                                        <h6>- Graphic Design</h6>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="item">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-sm-3">
+                                                <div class="port_item xs-m-top-30">
+                                                    <div class="port_img">
+                                                        <img src="{% static 'images/work-img1.jpg' %}" alt="" />
+                                                        <div class="port_overlay text-center">
+                                                            <a href="{% static 'images/work-img1.jpg' %}" class="popup-img">+</a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="port_caption m-top-20">
+                                                        <h5>Your Work Title</h5>
+                                                        <h6>- Graphic Design</h6>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-3">
+                                                <div class="port_item xs-m-top-30">
+                                                    <div class="port_img">
+                                                        <img src="{% static 'images/work-img2.jpg' %}" alt="" />
+                                                        <div class="port_overlay text-center">
+                                                            <a href="{% static 'images/work-img2.jpg' %}" class="popup-img">+</a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="port_caption m-top-20">
+                                                        <h5>Your Work Title</h5>
+                                                        <h6>- Graphic Design</h6>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-3">
+                                                <div class="port_item xs-m-top-30">
+                                                    <div class="port_img">
+                                                        <img src="{% static 'images/work-img3.jpg' %}" alt="" />
+                                                        <div class="port_overlay text-center">
+                                                            <a href="{% static 'images/work-img3.jpg' %}" class="popup-img">+</a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="port_caption m-top-20">
+                                                        <h5>Your Work Title</h5>
+                                                        <h6>- Graphic Design</h6>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-3">
+                                                <div class="port_item xs-m-top-30">
+                                                    <div class="port_img">
+                                                        <img src="{% static 'images/work-img4.jpg' %}" alt="" />
+                                                        <div class="port_overlay text-center">
+                                                            <a href="{% static 'images/work-img4.jpg' %}" class="popup-img">+</a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="port_caption m-top-20">
+                                                        <h5>Your Work Title</h5>
+                                                        <h6>- Graphic Design</h6>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Controls -->
+                            <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                                <i class="fa fa-angle-left" aria-hidden="true"></i>
+                                <span class="sr-only">Previous</span>
+                            </a>
+
+                            <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                                <i class="fa fa-angle-right" aria-hidden="true"></i>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </div>
+                    </div><!-- End off row -->
+                </div><!-- End off container -->
+            </section><!-- End off Product section -->
+
+
+
+            <!--Test section-->
+            <section id="test" class="test bg-grey roomy-60 fix">
+                <div class="container">
+                    <div class="row">                        
+                        <div class="main_test fix">
+
+                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                <div class="head_title text-center fix">
+                                    <h2 class="text-uppercase"><strong>Meet the Team</strong></h2>
+                                    <h5>Articulate Individuals with the right team spirit</h5>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="test_item fix">
+                                    <div class="item_img">
+                                        <img class="img-circle" src="{% static 'images/test-img1.jpg' %}" alt="" />
+                                    </div>
+
+                                    <div class="item_text">
+                                        <h4>Nwanguma O. David</h4>
+                                        <h5>PRESIDENT</h5>
+                                        <h6>nodavid@grinnetinnovations.com</h6>
+
+                                        <p>Natus voluptatum enim quod necessitatibus quis
+                                            expedita harum provident eos obcaecati id culpa
+                                            corporis molestias.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="test_item fix">
+                                    <div class="item_img">
+                                        <img class="img-circle" src="{% static 'images/test-img1.jpg' %}" alt="" />
+                                    </div>
+
+                                    <div class="item_text">
+                                        <h4>Thankgod Nwokugha</h4>
+                                        <h5>CEO</h5>
+                                        <h6>thankgodo@grinnetinnovations.com</h6>
+
+                                        <p>Natus voluptatum enim quod necessitatibus quis
+                                            expedita harum provident eos obcaecati id culpa
+                                            corporis molestias.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="test_item fix">
+                                    <div class="item_img">
+                                        <img class="img-circle" src="{% static 'images/test-img1.jpg' %}" alt="" />
+                                    </div>
+
+                                    <div class="item_text">
+                                        <h4>Jessica C. Nwanguma</h4>
+                                        <h5>AMBASSADOR</h5>
+                                        <h6>jessig@grinnetinnovations.com</h6>
+
+                                        <p>Natus voluptatum enim quod necessitatibus quis
+                                            expedita harum provident eos obcaecati id culpa
+                                            corporis molestias.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="test_item fix">
+                                    <div class="item_img">
+                                        <img class="img-circle" src="{% static 'images/test-img1.jpg' %}" alt="" />
+                                    </div>
+
+                                    <div class="item_text">
+                                        <h4>Njaka Emmanuel</h4>
+                                        <h5>GENERAL MANAGER</h5>
+                                        <h6>emmanueln@grinnetinnovations.com</h6>
+
+                                        <p>Natus voluptatum enim quod necessitatibus quis
+                                            expedita harum provident eos obcaecati id culpa
+                                            corporis molestias.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="test_item fix">
+                                    <div class="item_img">
+                                        <img class="img-circle" src="{% static 'images/test-img1.jpg' %}" alt="" />
+                                    </div>
+
+                                    <div class="item_text">
+                                        <h4>Clinton C. Nwogbu</h4>
+                                        <h5>EXECUTIVE SECRETARY</h5>
+                                        <h6>clinton@grinnetinnovations.com</h6>
+
+                                        <p>Natus voluptatum enim quod necessitatibus quis
+                                            expedita harum provident eos obcaecati id culpa
+                                            corporis molestias.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="test_item fix">
+                                    <div class="item_img">
+                                        <img class="img-circle" src="{% static 'images/test-img1.jpg' %}" alt="" />
+                                    </div>
+
+                                    <div class="item_text">
+                                        <h4>Onyema E. Lawrence</h4>
+                                        <h5>HEAD ACCOUNTS/TREASURY</h5>
+                                        <h6><onyema@grinnetinnovations class="com"></onyema@grinnetinnovations></h6>
+
+                                        <p>Natus voluptatum enim quod necessitatibus quis
+                                            expedita harum provident eos obcaecati id culpa
+                                            corporis molestias.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section><!-- End off test section -->
+
+
+            <!--Brand Section-->
+            <section id="brand" class="brand fix roomy-80">
+                <div class="container">
+                    <div class="row">
+                        <div class="main_brand text-center">
+                            <div class="col-md-2 col-sm-4 col-xs-6">
+                                <div class="brand_item sm-m-top-20">
+                                    <img src="{% static 'images/cbrand-img1.png' %}" alt="" />
+                                </div>
+                            </div>
+                            <div class="col-md-2 col-sm-4 col-xs-6">
+                                <div class="brand_item sm-m-top-20">
+                                    <img src="{% static 'images/cbrand-img2.png' %}" alt="" />
+                                </div>
+                            </div>
+                            <div class="col-md-2 col-sm-4 col-xs-6">
+                                <div class="brand_item sm-m-top-20">
+                                    <img src="{% static 'images/cbrand-img3.png' %}" alt="" />
+                                </div>
+                            </div>
+                            <div class="col-md-2 col-sm-4 col-xs-6">
+                                <div class="brand_item sm-m-top-20">
+                                    <img src="{% static 'images/cbrand-img4.png' %}" alt="" />
+                                </div>
+                            </div>
+                            <div class="col-md-2 col-sm-4 col-xs-6">
+                                <div class="brand_item sm-m-top-20">
+                                    <img src="{% static 'images/cbrand-img5.png' %}" alt="" />
+                                </div>
+                            </div>
+                            <div class="col-md-2 col-sm-4 col-xs-6">
+                                <div class="brand_item sm-m-top-20">
+                                    <img src="{% static 'images/cbrand-img6.png' %}" alt="" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section><!-- End off Brand section -->
+
+
+            <!--Call to  action section-->
+            <section id="action" class="action bg-primary roomy-40">
+                <div class="container">
+                    <div class="row">
+                        <div class="maine_action">
+                            <div class="col-md-7">
+                                <div class="action_item text-center">
+                                    <h3 class="text-white text-uppercase">Registration for 2019 conference begins soon….</h3>
+                                </div>
+                            </div>
+                            <div class="col-md-5">
+                                <div class="action_btn text-left sm-text-center">
+                                    <a href="" class="btn btn-default">MAKE YOUR SEAT RESERVATIONS NOW!</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {% endblock content %}
+
+
+            <footer id="contact" class="footer action-lage bg-black p-top-80">
+                <!--<div class="action-lage"></div>-->
+                <div class="container">
+                    <div class="row">
+                        <div class="widget_area">
+                            <div class="col-md-3">
+                                <div class="widget_item widget_about">
+                                    <h5 class="text-white">About Us</h5>
+                                    <p class="m-top-20">	A team of highly esteemed visionaries and service oriented 
+                                        technologists and entrepreneurs who understand the business 
+                                        and technology world is the motivation of the company. .</p>
+                                    <div class="widget_ab_item m-top-30">
+                                        <div class="item_icon"><i class="fa fa-location-arrow"></i></div>
+                                        <div class="widget_ab_item_text">
+                                            <h6 class="text-white">Location</h6>
+                                            <p>
+                                                Offices in Nigeria, UAE and Cyprus</p>
+                                        </div>
+                                    </div>
+                                    <div class="widget_ab_item m-top-30">
+                                        <div class="item_icon"><i class="fa fa-phone"></i></div>
+                                        <div class="widget_ab_item_text">
+                                            <h6 class="text-white">Phone :</h6>
+                                            <p>NIGERIA: +2347080 069 829</p>
+                                            <p>CYORUS: +905338826571 </p>
+                                            <p>UAE: +971 505728643</p>
+                                        </div>
+                                    </div>
+                                    <div class="widget_ab_item m-top-30">
+                                        <div class="item_icon"><i class="fa fa-envelope-o"></i></div>
+                                        <div class="widget_ab_item_text">
+                                            <h6 class="text-white">Email Address :</h6>
+                                            <p>info@grinnetinnovations.com</p>
+                                        </div>
+                                    </div>
+                                </div><!-- End off widget item -->
+                            </div><!-- End off col-md-3 -->
+
+                            <div class="col-md-3">
+                                <div class="widget_item widget_latest sm-m-top-50">
+                                    <h5 class="text-white">Up Coming Events/Conferences</h5>
+                                    <div class="widget_latst_item m-top-30">
+                                        <div class="item_icon"><img src="{% static 'images/ltst-img-1.jpg' %}" alt="" /></div>
+                                        <div class="widget_latst_item_text">
+                                            <p>2019 Empowerment Conference</p>
+                                            <a href="">21<sup>th</sup> July 2019</a>
+                                        </div>
+                                    </div>
+                                </div><!-- End off widget item -->
+                            </div><!-- End off col-md-3 -->
+
+                            <div class="col-md-3">
+                                <div class="widget_item widget_service sm-m-top-50">
+                                    <h5 class="text-white">Our Services</h5>
+                                    <ul class="m-top-20">
+                                        <li class="m-top-20"><a href=""><i class="fa fa-angle-right"></i> Business Consulting</a></li>
+                                        <li class="m-top-20"><a href=""><i class="fa fa-angle-right"></i>Professional business/general counseling </a></li>
+                                        <li class="m-top-20"><a href=""><i class="fa fa-angle-right"></i> Empowerment for job creation </a></li>
+                                        <li class="m-top-20"><a href=""><i class="fa fa-angle-right"></i> Business/Individual Coaching </a></li>
+                                        <li class="m-top-20"><a href=""><i class="fa fa-angle-right"></i> Entrepreneurial lectures</a></li>
+                                        <li class="m-top-20"><a href=""><i class="fa fa-angle-right"></i> Conference Management </a></li>
+                                        <li class="m-top-20"><a href=""><i class="fa fa-angle-right"></i> SEE OTHERS ... </a></li>
+                                    </ul>
+                                </div><!-- End off widget item -->
+                            </div><!-- End off col-md-3 -->
+
+                            <div class="col-md-3">
+                                <div class="widget_item widget_newsletter sm-m-top-50">
+                                    <h5 class="text-white">Newsletter</h5>
+                                    <form class="form-inline m-top-30">
+                                        <div class="form-group">
+                                            <input type="email" class="form-control" placeholder="Enter you Email">
+                                            <button type="submit" class="btn text-center"><i class="fa fa-arrow-right"></i></button>
+                                        </div>
+
+                                    </form>
+                                    <div class="widget_brand m-top-40">
+                                        <a href="" class="text-uppercase">
+                                            <img src="{% static 'images/logo-alt.png' %}" alt="GNI" style="width: 220px;">
+                                        </a>
+                                        <p>We look into your business and startup differently and profer 
+                                            the right tools to get you up to speed.</p>
+                                    </div>
+                                    <ul class="list-inline m-top-20">
+                                        <li>-  <a href=""><i class="fa fa-facebook"></i></a></li>
+                                        <li><a href=""><i class="fa fa-twitter"></i></a></li>
+                                        <li><a href=""><i class="fa fa-linkedin"></i></a></li>
+                                    </ul>
+
+                                </div><!-- End off widget item -->
+                            </div><!-- End off col-md-3 -->
+                        </div>
+                    </div>
+                </div>
+                <div class="main_footer fix bg-mega text-center p-top-40 p-bottom-30 m-top-80">
+                    <div class="col-md-12">
+                        <p class="wow fadeInRight" data-wow-duration="1s">
+                            With  
+                            <i class="fa fa-heart"></i>
+                           from
+                            <a href="grinnetinnovations.com">GRIN NET INNOVATIONS</a> 
+                            2018. All Rights Reserved
+                        </p>
+                    </div>
+                </div>
+            </footer>
+
+
+
+
+        </div>
+
+        <!-- JS includes -->
+
+        <script src="{% static 'js/vendor/jquery-1.11.2.min.js' %}"></script>
+        <script src="{% static 'js/vendor/bootstrap.min.js' %}"></script>
+
+        <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+        <script src="{% static 'js/jquery.magnific-popup.js' %}"></script>
+        <script src="{% static 'js/jquery.easing.1.3.js' %}"></script>
+        <script src="{% static 'css/slick/slick.js' %}"></script>
+        <script src="{% static 'css/slick/slick.min.js' %}"></script>
+        <script src="{% static 'js/jquery.collapse.js' %}"></script>
+        <script src="{% static 'js/bootsnav.js' %}"></script>
+
+
+
+        <script src="{% static 'js/plugins.js' %}"></script>
+        <script src="{% static 'js/main.js' %}"></script>
+        {% block extrajs %}{% endblock %}
+
+    </body>
+</html>
