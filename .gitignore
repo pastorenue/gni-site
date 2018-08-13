@@ -19,8 +19,8 @@ lib64/
 parts/
 sdist/
 var/
-static/
-media/
+/static/
+/media/
 .vscode/
 */__pycache__/
 wheels/
