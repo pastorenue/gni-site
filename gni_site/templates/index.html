@@ -118,7 +118,7 @@
                         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
                             <i class="fa fa-bars"></i>
                         </button>
-                        <a class="navbar-brand" href="#brand">
+                        <a class="navbar-brand" href="{% url 'index' %}">
                             <img src="{% static 'images/logo.png' %}" class="logo" alt="" style="width: 230px;">
                             <!--<img src="assets/images/footer-logo.png" class="logo logo-scrolled" alt="">-->
                         </a>
@@ -150,10 +150,11 @@
                         <div class="main_home text-center">
                             <div class="col-md-12">
                                 <div class="hello_slid">
+                                    {% block slide_item %}
                                     <div class="slid_item">
                                         <div class="home_text ">
-                                            <h2 class="text-white">Welcome to <strong>Grin Net Innovations</strong></h2>
-                                            <h1 class="text-white">We Do Business All Of Time</h1>
+                                            <h1 class="text-white">Welcome to <strong>Grin Net Innovations</strong></h1>
+                                            <h2 class="text-white">We Give Your Business a Whole New Perspective</h2>
                                             <h3 class="text-white">- We Create a <strong>Concept</strong> into The Market -</h3>
                                         </div>
 
@@ -170,21 +171,23 @@
                                         </div>
 
                                         <div class="home_btns m-top-40">
-                                            <a href="" class="btn btn-info m-top-20">Hear it from the FOUNDER</a>
+                                            <a href="{% url 'speech' %}" class="btn btn-primary m-top-20">Hear it from the FOUNDER</a>
                                         </div>
                                     </div><!-- End off slid item -->
                                     <div class="slid_item">
                                         <div class="home_text ">
-                                            <h2 class="text-white">We Not Only Provide <strong>Consultancy</strong> Services,</h2>
-                                            <h1 class="text-white">We Provide You The Right Framework for Your Business</h1>
+                                            <h1 class="text-white">We Not Only Provide <strong>Consultancy</strong> Services,</h2>
+                                            <h2 class="text-white">Get Your Best Visa Support To Any Part of The World</h1>
                                             <h3 class="text-white">- BE BOLD | BE INNOVATIVE | BE INSPIRED -</h3>
                                         </div>
 
                                         <div class="home_btns m-top-40">
                                             <a href="" class="btn btn-danger m-top-20">Book an Appointment</a>
                                             <a href="" class="btn btn-default m-top-20">Take a Tour</a>
+                                            <a href="" class="btn btn-primary m-top-20">Seek Visa Support</a>
                                         </div>
                                     </div><!-- End off slid item -->
+                                    {% endblock slide_item %}
                                 </div>
                             </div>
 
@@ -209,20 +212,52 @@
                                     </div>
                                     <div class="f_item_text">
                                         <h3>Consulting</h3>
-                                        <p>Lorem ipsum dolor sit amet consectetur adipiscing elit pellentesque eleifend
-                                            in sit amet mattis volutpat rhoncus.</p>
+                                        <p>
+                                            We innovate for our clients by improving on their existing models especially,
+                                            in marketing and advertising.
+                                        </p>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-3">
                                 <div class="features_item sm-m-top-30">
                                     <div class="f_item_icon">
-                                        <i class="fa fa-user-friends"></i>
+                                        <i class="fa fa-plane"></i>
                                     </div>
                                     <div class="f_item_text">
-                                        <h3>Business/Individual Coaching</h3>
-                                        <p>Lorem ipsum dolor sit amet consectetur adipiscing elit pellentesque eleifend
-                                            in sit amet mattis volutpat rhoncus.</p>
+                                        <h3>Business Coaching</h3>
+                                        <p>
+                                            Experience a one on one coaching sections
+                                            with experts both for young entrepreneurs and business owners.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="features_item sm-m-top-30">
+                                    <div class="f_item_icon">
+                                        <i class="fa fa-user"></i>
+                                    </div>
+                                    <div class="f_item_text">
+                                        <h3>Travel/Visa Support</h3>
+                                        <p>
+                                            Get proper support for all of your travels and visa dependent challenges to 
+                                            any part of the world.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="features_item sm-m-top-30">
+                                    <div class="f_item_icon">
+                                        <i class="fa fa-home"></i>
+                                    </div>
+                                    <div class="f_item_text">
+                                        <h3>Conference Management </h3>
+                                        <p>
+                                            With our partnership with great institutions, <b>Conference Organization</b> has 
+                                            become quite interesting.
+                                        </p>
                                     </div>
                                 </div>
                             </div>
@@ -233,8 +268,10 @@
                                     </div>
                                     <div class="f_item_text">
                                         <h3>Empowerment lectures </h3>
-                                        <p>Lorem ipsum dolor sit amet consectetur adipiscing elit pellentesque eleifend
-                                            in sit amet mattis volutpat rhoncus.</p>
+                                        <p>
+                                            Get along with our conferences as they are power packed with lectures for youths
+                                            in various countries.
+                                        </p>
                                     </div>
                                 </div>
                             </div>
@@ -244,9 +281,11 @@
                                         <i class="fa fa-sliders"></i>
                                     </div>
                                     <div class="f_item_text">
-                                        <h3>Conference Management </h3>
-                                        <p>Lorem ipsum dolor sit amet consectetur adipiscing elit pellentesque eleifend
-                                            in sit amet mattis volutpat rhoncus.</p>
+                                        <h3>Professional Business/ General Counseling  </h3>
+                                        <p>
+                                            Subscribe to our blogs and newsletters for professional tips and business counselling
+                                            on growing your business.
+                                        </p>
                                     </div>
                                 </div>
                             </div>
@@ -267,21 +306,21 @@
                                     <div class="business_items text-center">
                                         <div class="business_item">
                                             <div class="business_img">
-                                                <img src="{% static 'images/about-img1.jpg' %}" alt="" />
+                                                <img src="{% static 'images/ads_1.jpg' %}" alt="" />
                                             </div>
                                         </div>
 
                                         <div class="business_item">
                                             <div class="business_img">
-                                                <img src="{% static 'images/about-img1.jpg' %}" alt="" />
+                                                <img src="{% static 'images/ads_2.jpg' %}" alt="" />
                                             </div>
                                         </div>
 
-                                        <div class="business_item">
+                                        <!-- <div class="business_item">
                                             <div class="business_img">
                                                 <img src="{% static 'images/about-img1.jpg' %}" alt="" />
                                             </div>
-                                        </div>
+                                        </div> -->
                                     </div>
                                 </div>
                             </div>
@@ -343,50 +382,50 @@
                                                         </div>
                                                     </div>
                                                     <div class="port_caption m-top-20">
-                                                        <h5>Your Work Title</h5>
-                                                        <h6>- Graphic Design</h6>
+                                                        <h5>Global Visa Support</h5>
+                                                        <h6>- Travel/Tourism</h6>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="col-sm-3">
                                                 <div class="port_item xs-m-top-30">
                                                     <div class="port_img">
-                                                        <img src="{% static 'images/work-img2.jpg' %}" alt="" />
+                                                        <img src="{% static 'images/p_1.jpg' %}" alt="" />
                                                         <div class="port_overlay text-center">
-                                                            <a href="a{% static 'images/work-img2.jpg' %}" class="popup-img">+</a>
+                                                            <a href="a{% static 'images/p_1.jpg' %}" class="popup-img">+</a>
                                                         </div>
                                                     </div>
                                                     <div class="port_caption m-top-20">
-                                                        <h5>Your Work Title</h5>
-                                                        <h6>- Graphic Design</h6>
+                                                        <h5>Holiday Packages</h5>
+                                                        <h6>- Travel/Tourism</h6>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="col-sm-3">
                                                 <div class="port_item xs-m-top-30">
                                                     <div class="port_img">
-                                                        <img src="{% static 'images/work-img3.jpg' %}" alt="" />
+                                                        <img src="{% static 'images/p_3.jpg' %}" alt="" />
                                                         <div class="port_overlay text-center">
-                                                            <a href="{% static 'images/work-img3.jpg' %}" class="popup-img">+</a>
+                                                            <a href="{% static 'images/p_3.jpg' %}" class="popup-img">+</a>
                                                         </div>
                                                     </div>
                                                     <div class="port_caption m-top-20">
-                                                        <h5>Your Work Title</h5>
-                                                        <h6>- Graphic Design</h6>
+                                                        <h5>Marketing/Business Consulting</h5>
+                                                        <h6>- Consulting</h6>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="col-sm-3">
                                                 <div class="port_item xs-m-top-30">
                                                     <div class="port_img">
-                                                        <img src="{% static 'images/work-img4.jpg' %}" alt="" />
+                                                        <img src="{% static 'images/p_2.jpg' %}" alt="" />
                                                         <div class="port_overlay text-center">
-                                                            <a href="{% static 'images/work-img4.jpg' %}" class="popup-img">+</a>
+                                                            <a href="{% static 'images/p_2.jpg' %}" class="popup-img">+</a>
                                                         </div>
                                                     </div>
                                                     <div class="port_caption m-top-20">
-                                                        <h5>Your Work Title</h5>
-                                                        <h6>- Graphic Design</h6>
+                                                        <h5>Flight and Hotel Reservations</h5>
+                                                        <h6>- Travel/Tourism</h6>
                                                     </div>
                                                 </div>
                                             </div>
@@ -394,7 +433,7 @@
                                     </div>
                                 </div>
 
-                                <div class="item">
+                                <!-- <div class="item">
                                     <div class="container">
                                         <div class="row">
                                             <div class="col-sm-3">
@@ -455,7 +494,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </div> -->
                             </div>
 
                             <!-- Controls -->
@@ -476,7 +515,7 @@
 
 
             <!--Test section-->
-            <section id="test" class="test bg-grey roomy-60 fix">
+            <!-- <section id="test" class="test bg-grey roomy-60 fix">
                 <div class="container">
                     <div class="row">                        
                         <div class="main_test fix">
@@ -593,11 +632,12 @@
                         </div>
                     </div>
                 </div>
-            </section><!-- End off test section -->
+            </section> -->
+            <!-- End off test section -->
 
 
             <!--Brand Section-->
-            <section id="brand" class="brand fix roomy-80">
+            <!-- <section id="brand" class="brand fix roomy-80">
                 <div class="container">
                     <div class="row">
                         <div class="main_brand text-center">
@@ -634,7 +674,8 @@
                         </div>
                     </div>
                 </div>
-            </section><!-- End off Brand section -->
+            </section> -->
+            <!-- End off Brand section -->
 
 
             <!--Call to  action section-->
@@ -737,7 +778,7 @@
 
                                     </form>
                                     <div class="widget_brand m-top-40">
-                                        <a href="" class="text-uppercase">
+                                        <a href="{% url 'index' %}" class="text-uppercase">
                                             <img src="{% static 'images/logo-alt.png' %}" alt="GNI" style="width: 220px;">
                                         </a>
                                         <p>We look into your business and startup differently and profer 
@@ -760,7 +801,7 @@
                             With  
                             <i class="fa fa-heart"></i>
                            from
-                            <a href="grinnetinnovations.com">GRIN NET INNOVATIONS</a> 
+                            <a href="http://grinnetinnovations.com">GRIN NET INNOVATIONS</a> 
                             2018. All Rights Reserved
                         </p>
                     </div>

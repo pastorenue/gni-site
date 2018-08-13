@@ -28,7 +28,7 @@ SECRET_KEY = os.environ.get('GRIN_SECRET_KEY', 'ad6ev8!0t(9k*kq-7#o$&(2bi(3&b=$e
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get('LOCAL_DEBUG', False)
 
-ALLOWED_HOSTS = ['locahost', '159.65.100.136', '.grinnetinnovations.com']
+ALLOWED_HOSTS = ['localhost', '159.65.100.136', '.grinnetinnovations.com']
 
 
 # Application definition
