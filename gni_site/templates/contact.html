@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block heading %}Contact Us {% endblock heading %}
+
+{%  block breadcrumbs %} <li>Contact Us</li> {% endblock %}
+
+
+{% block inner-content %}
+<section class="bg-white service-tab">
+   <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-sm-12 wow fadeInRight" data-wow-duration="2s">
+                <img src="{% static 'images/ad_6.jpg' %}" alt="">
+            </div>
+            <div class="col-md-6 col-sm-12">
+                <form action="{% url 'contacts:new-contact' %}" method="POST">{% csrf_token %}
+                    <div class="form-group">
+                        <label for="id_email">Email:</label>
+                        <input type="email" name="email" 
+                                id="id_email" class="form-control input-sm" 
+                                placeholder="Please Enter a valid Email Address e.g. glyph@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="id_name">Full Name:</label>
+                        <input type="text" name="full_name" id="id_name" 
+                                class="form-control input-sm" 
+                                placeholder="Enter Full Name e.g. Emmanuel Gliph">
+                    </div>
+                    <div class="form-group">
+                        <label for="id_org">Name of Organization (optional):</label>
+                        <input type="text" name="organization" 
+                                id="id_org" class="form-control input-sm" 
+                                placeholder="Your Company/Organization e.g. Google Inc.">
+                    </div>
+                    <div class="form-group">
+                        <label for="id_message">Leave a Message:</label>
+                        <textarea name="message" id="id_message"  class="form-control input-sm" 
+                                cols="30" rows="5" 
+                                placeholder="Leave a message">
+                        </textarea>
+                    </div>
+                    <button type="submit" class="btn btn-success btn-sm btn-block">Send</button>
+                </form>
+            </div>
+        </div>
+   </div>
+</section>
+{% endblock inner-content %}
+    

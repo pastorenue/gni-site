@@ -1,0 +1,55 @@
+{% load static %}
+
+<!--Home Sections-->
+<section id="home" class="home bg-black fix">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class="main_home text-center">
+                <div class="col-md-12">
+                    <div class="hello_slid">
+                        {% block slide_item %}
+                        <div class="slid_item">
+                            <div class="home_text ">
+                                <h1 class="text-white">Welcome to <strong>Grin Net Innovations</strong></h1>
+                                <h2 class="text-white">We Give Your Business a Whole New Perspective</h2>
+                                <h3 class="text-white">- We Create a <strong>Concept</strong> into The Market -</h3>
+                            </div>
+
+                            <div class="home_btns m-top-40">
+                                <a data-toggle="modal" data-target="#id_sub" class="btn btn-primary m-top-20">SIGN UP FOR A NEWSLETTER </a>
+                            </div>
+                        </div><!-- End off slid item -->
+                        <div class="slid_item">
+                            <div class="home_text ">
+                                <h1 class="text-white">This is <strong>GNI</strong></h1>
+                                <h2 class="text-white">Lets Make You a Valuable Entrepreneur</h2>
+                                <h3 class="text-white">-Excellent Delivery is our <strong>MANTRA</strong> -</h3>
+                            </div>
+
+                            <div class="home_btns m-top-40">
+                                <a href="{% url 'speech' %}" class="btn btn-primary m-top-20">Hear it from the FOUNDER</a>
+                            </div>
+                        </div><!-- End off slid item -->
+                        <div class="slid_item">
+                            <div class="home_text ">
+                                <h1 class="text-white">On Our <strong>Travel & Tourism</strong> Services,</h2>
+                                <h2 class="text-white">Get Your Best Visa Support To Any Part of The World</h1>
+                                <h3 class="text-white">- BE BOLD | BE INNOVATIVE | BE INSPIRED -</h3>
+                            </div>
+
+                            <div class="home_btns m-top-40">
+                                <a href="{% url 'contact-us' %}" class="btn btn-danger m-top-20">Book an Appointment</a>
+                                <a href="{% url 'services' %}" class="btn btn-primary m-top-20">See What We Offer</a>
+                            </div>
+                        </div><!-- End off slid item -->
+                        {% endblock slide_item %}
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div><!--End off row-->
+    </div><!--End off container -->
+</section> <!--End off Home Sections-->

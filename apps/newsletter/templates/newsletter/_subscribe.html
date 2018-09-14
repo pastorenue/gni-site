@@ -1,0 +1,28 @@
+{% load static %}
+<div id="id_sub" class="modal fade" role="dialog" style="">
+    <div class="modal-dialog" style="z-index: 1060;">
+        <!-- Modal content-->
+        <div class="modal-content">
+        <div class="modal-header" style="text-align: center; background: rgb(5, 126, 100); ">
+            <h4 class="modal-title" style="font-weight: 400; color: #fff;">Sign Up For A Newsletter</h4>
+        </div>
+        <form action="{% url 'newsletters:newsletter-signup' %}" method="POST">{% csrf_token %}
+            <div class="modal-body">
+                <div class="form-group">
+                    <label for="">Email: </label>
+                    <input type="email" required name="email" class="form-control input-sm" placeholder="Enter your Email Address" id="">
+                </div>
+                <div class="form-group">
+                    <label for="">Full Name (optional): </label>
+                    <input type="text" name="full_name" class="form-control input-sm" placeholder="Enter Your Full name" id="">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-primary" style="padding: 10px 30px; border: none; ">Proceed..</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal" style="padding: 10px 30px; border: none; background: rgb(172, 172, 172); color: #fff;">Close</button>
+            </div>
+        </form>
+        </div>
+    
+    </div>
+</div>

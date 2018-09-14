@@ -1337,3 +1337,97 @@ work Section style
     color: #ddd;
     padding: 5px;
 }
+
+/*Breadcrumbs Section*/
+.breadcrumbs{
+    padding: 15px;
+}
+.breadcrumbs ul li{
+    display: inline-block;
+    margin-right: 10px;
+    padding: 5px;
+    font-size: 16px;
+    color: rgb(228, 227, 227);
+}
+.breadcrumbs ul li span{
+    margin-right: 20px;
+}
+.port_caption h5 {
+    margin-bottom: 0; 
+}
+.service-tab {
+    position: relative;
+    box-shadow: 2px 0 7px rgba(0,0,0,0.1); 
+    padding: 30px 50px;
+}
+.service-tab p {
+    text-align: center;
+    font-size: 34px;
+    font-weight: 600;
+    line-height: 1.2em;
+    padding: 80px 30px;
+}
+.service-tab h2::before {
+    content: ">> ";
+}
+.service-tab img {
+    text-align: center;
+    box-shadow: 3px 2px 8px rgba(0,0,0,0.3);
+    border-radius: 3px;
+}
+
+@media(max-width: 328px) {
+    .service-tab p {
+        text-align: center;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 1.1em;
+        padding: 10px 10px;
+    }
+    .service-tab img {
+        text-align: center;
+        width: 100%;
+    }
+}
+
+/* Notification */
+#notification {
+    box-shadow: 5x 5px 13px rgba(0,212,0,1);
+    width: 100%;
+    padding: 5px;
+	text-align: center;
+	max-height: 35px;
+}
+
+#notification div span {
+    position: absolute;
+    top: 3px;
+    right: 12px;
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.alert-success {
+    color: #3c763d;
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+}
+
+.alert-error {
+    color: #a94442;
+    background-color: #f2dede;
+    border-color: #ebccd1;
+}
+
+.alert-warning {
+    color: #8a6d3b;
+    background-color: #fcf8e3;
+    border-color: #faebcc;
+}
+
+.alert-info {
+    color: #31708f;
+    background-color: #d9edf7;
+    border-color: #bce8f1;
+}

@@ -1,0 +1,29 @@
+{% extends 'index.html' %}
+{% load static %}
+
+{% block slider %}
+<div style="height: 120px;"></div>
+<section class="bg-grey">
+    <div class="container" style="padding: 30px;">
+       <h2 style="color: rgb(11, 67, 104); font-weight: bold;">
+       {% block heading %}
+           
+       {% endblock heading %}
+           </h2>
+    </div>
+</section>
+<section class="bg-white">
+    <div class="container breadcrumbs">
+        <ul>
+            <li><a href=""><strong>GNI</strong> -Home</a> </li><span>&raquo;</span>
+            {%  block breadcrumbs %}{% endblock %}
+        </ul>
+    </div>
+</section>
+{% endblock slider %}
+
+{% block content %}
+    {% block inner-content %}
+    
+    {% endblock %}
+{% endblock %}
