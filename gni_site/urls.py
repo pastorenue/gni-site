@@ -24,6 +24,7 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', TemplateView.as_view(template_name="index.html"), name="index"),
     url(r'^services$', TemplateView.as_view(template_name="services.html"), name="services"),
+    url(r'^events-and-conferences$', TemplateView.as_view(template_name="events.html"), name="events"),
     url(r'^contact-us$', TemplateView.as_view(template_name="contact.html"), name="contact-us"),
     url(r'^president-speech$', TemplateView.as_view(template_name="speech.html"), name="speech"),
     url(r'^newsletters/', include('newsletter.urls', namespace='newsletters')),

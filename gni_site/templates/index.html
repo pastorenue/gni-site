@@ -85,14 +85,14 @@
                                         <li><a href=""><i class="fa fa-phone"></i> NIG: 07080069829</a></li>
                                         <li><a href=""><i class="fa fa-phone"></i> CYPRUS: +905338826571</a></li>
                                         <li><a href=""><i class="fa fa-phone"></i> UAE: +971565804319</a></li>
-                                        <li><a href=""><i class="fa fa-envelope-o"></i> info@grinnetinnovations.com</a></li>
+                                        <li><a href="mailto: info@grinnetinnovations.com"><i class="fa fa-envelope-o"></i> info@grinnetinnovations.com</a></li>
                                     </ul>
                                 </div>
                             </div>
                             <div class="col-md-3">
                                 <div class="navbar-socail text-right sm-text-center">
                                     <ul class="list-inline">
-                                        <li><a href=""><i class="fa fa-facebook"></i></a></li>
+                                        <li><a href="https://www.facebook.com/grinnetinnovations/"><i class="fa fa-facebook"></i></a></li>
                                         <li><a href=""><i class="fa fa-twitter"></i></a></li>
                                         <li><a href=""><i class="fa fa-linkedin"></i></a></li>
                                     </ul>
@@ -139,10 +139,10 @@
                     <div class="collapse navbar-collapse" id="navbar-menu">
                         <ul class="nav navbar-nav navbar-right">
                             <li><a href="{% url 'index' %}">Home</a></li>                    
-                            <li><a href="{% url 'index' %}/#features">About</a></li>
-                            <li><a href="{% url 'services' %}">Services</a></li>
-                            <li><a href="{% url 'index' %}/#work">Events/Conferences</a></li>
-                            <li><a href="#">Blog</a></li>
+                            <li><a href="{% url 'index' %}#about">About</a></li>
+                            <li><a href="{% url 'index' %}#services">Services</a></li>
+                            <li><a href="{% url 'events' %}">Events/Conferences</a></li>
+                            <!-- <li><a href="#">Blog</a></li> -->
                             <li><a href="{% url 'contact-us' %}">Contact</a></li>
                         </ul>
                     </div><!-- /.navbar-collapse -->
@@ -251,7 +251,7 @@
 
 
             <!--Business Section-->
-            <section id="business" class="business bg-grey roomy-70">
+            <section id="about" class="business bg-grey roomy-70">
                 <div class="container">
                     <div class="row">
                         <div class="main_business">
@@ -307,7 +307,7 @@
 
 
             <!--product section-->
-            <section id="product" class="product">
+            <section id="services" class="product">
                 <div class="container">
                     <div class="main_product roomy-80">
                         <div class="head_title text-center fix">
