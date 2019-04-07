@@ -130,3 +130,8 @@ MEDIA_URL = '/media/'
 STATICFILES_DIRS = (
     os.path.join(PROJECT_DIR, 'static'),
 )
+
+#Login Credentials and urls
+LOGIN_URL = 'login' #reverse_lazy('login') ##VERY HARMFUL TO LOGINREQUIRED VIEWS
+LOGIN_REDIRECT_URL = 'dashboard'
+LOGOUT_REDIRECT_URL = '/'

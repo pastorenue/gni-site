@@ -2,9 +2,9 @@
 {% load static %}
 
 {% block title %}Login{% endblock %}
-{% block heading %}Jobs At Dubai :: Login {% endblock heading %}
+{% block heading %}Jobs Abroad :: Login {% endblock heading %}
 
-{%  block breadcrumbs %} <li><a href="{% url 'new-recruit' %}">Jobs at Dubai</a></li>&raquo; <li>Login</li> {% endblock %}
+{%  block breadcrumbs %} <li><a href="{% url 'new-recruit' %}">Jobs Abroad</a></li>&raquo; <li>Login</li> {% endblock %}
 
 
 {% block inner-content %}
@@ -35,8 +35,8 @@
 .btn-submit {
     padding: 10px 35px;
     border-radius: 25px;
-    color: #00a885;
-    background: #fff;
+    background: #00a885;
+    color: #fff;
     font-size: 1.3em;
     transition: all .46s ease-in-out;
     outline: none;
@@ -68,22 +68,30 @@
                         <h3 style="font-weight: 600; font-size: 2em; text-align: center; color: rgb(27, 161, 110);">Login to Your Status Board</h3>
                         <h5 style="text-align: center; color: rgb(8, 102, 102);">...The fun of working abroad starts here</h5>
                     </div>
-                    <form method="POST" enctype="multipart/form-data"action="{% url 'new-recruit' %}">{% csrf_token %}
-                        <div class="form-group">
-                            <label for="id_name">Full Name</label>
-                            <input required type="text" name="f_name" id="id_name" 
-                                        class="form-control sm tip"
-                                        placeholder="Enter Your Full Name e.g Asam Adamu">
-                        </div>
-                        <div class="form-group">
-                            <label for="id_email">Email</label>
-                            <input required type="email" name="email" id="id_email" 
-                                        class="form-control sm tip"
-                                        placeholder="Enter Your Email e.g example@example.com">
-                        </div>
+                    <form method="POST">{% csrf_token %}
+                        {{form.errors}}
+                        {% for field in form %}
+                            {% if field.html_name == 'username' %} 
+                            <div class="form-group">
+                            <label for="{{field.id_for_label}}">Username</label>
+                                <input type="text" name="{{field.html_name}}" id="{{form.id_for_label}}" 
+                                            class="form-control sm tip"
+                                            placeholder="Enter your email">
+                                {{field.errors}}
+                            </div>
+                            {% else %}
+                            <div class="form-group">
+                                <label for="id_email">Password</label>
+                                <input type="password" name="{{field.html_name}}" id="{{field.id_for_label}}" 
+                                            class="form-control sm tip"
+                                            placeholder="Password">
+                            </div>
+                            {% endif %}
+                        {% endfor %}
                         <div class="form-group" style="text-align: center;">
                             <button type="submit" class="btn-submit">Proceed...</button>
                         </div>
+                        <input type="hidden" name="next" value="{{ next }}">
                     </form>
                 </div>
                 <div class="col-md-6 col-sm-12 wow fadeInRight" data-wow-duration="2s">

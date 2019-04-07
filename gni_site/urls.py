@@ -18,7 +18,11 @@ from django.contrib import admin
 from django.conf.urls.static import static
 from django.conf import settings
 from django.views.generic.base import TemplateView
-from newsletter.views import new_recruit
+from newsletter.views import new_recruit, dashboard
+from django.contrib.auth import views as auth_views
+from newsletter.views import change_password
+from django.views.static import serve
+from django.conf import settings
 
 
 urlpatterns = [
@@ -26,10 +30,18 @@ urlpatterns = [
     url(r'^$', TemplateView.as_view(template_name="index.html"), name="index"),
     url(r'^services$', TemplateView.as_view(template_name="services.html"), name="services"),
     url(r'^events-and-conferences$', TemplateView.as_view(template_name="events.html"), name="events"),
-    url(r'^jobs-at-dubai$', new_recruit, name="new-recruit"),
+    url(r'^jobs$', new_recruit, name="new-recruit"),
+    url(r'^my-status$', dashboard, name="dashboard"),
     url(r'^contact-us$', TemplateView.as_view(template_name="contact.html"), name="contact-us"),
-    url(r'^login$', TemplateView.as_view(template_name="sign_in.html"), name="login"),
     url(r'^president-speech$', TemplateView.as_view(template_name="speech.html"), name="speech"),
     url(r'^newsletters/', include('newsletter.urls', namespace='newsletters')),
     url(r'^contact-us/', include('contacts.urls', namespace='contacts')),
 ]+static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+
+
+urlpatterns += [
+    url(r'^auth/login$', auth_views.LoginView.as_view(template_name='sign_in.html'), name='login'),
+    url(r'^auth/password_change$', change_password, name='password_change'),
+    url(r'^auth/password_change/done$', auth_views.PasswordChangeDoneView.as_view(), name='password_change_done'),
+    url(r'^auth/logout/$', auth_views.LogoutView.as_view(), name='logout'),
+]

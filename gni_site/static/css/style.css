@@ -1392,11 +1392,16 @@ work Section style
 
 /* Notification */
 #notification {
+    position: absolute;
+    top: 20px;
+    left: 12px;
     box-shadow: 5x 5px 13px rgba(0,212,0,1);
-    width: 100%;
-    padding: 5px;
+    width: 30%;
+    padding: 25px;
+    font-size: 14px;
 	text-align: center;
-	max-height: 35px;
+    min-height: 55px;
+    z-index: 1000;
 }
 
 #notification div span {
@@ -1413,7 +1418,6 @@ work Section style
     background-color: #dff0d8;
     border-color: #d6e9c6;
 }
-
 .alert-error {
     color: #a94442;
     background-color: #f2dede;
@@ -1431,3 +1435,25 @@ work Section style
     background-color: #d9edf7;
     border-color: #bce8f1;
 }
+.ls-menu {
+    padding-top: 10px;
+  }
+  .ls-menu li {
+    padding: 15px 5px;
+    border-bottom: 1px solid rgb(235, 233, 233);
+    cursor: pointer;
+    transition: all .44s ease-in-out;
+  }
+   .ls-menu li:hover .ls-menu li a {
+    color: #0b0e0c;
+  }
+  .ls-menu li:hover {
+    transform: translateX(3px);
+    background-color: rgb(210, 235, 203);
+  }
+  .ls-menu li:active {
+    background: #222222;
+  }
+  .ls-menu li:active .ls-menu li a {
+    color: #fff;
+  }

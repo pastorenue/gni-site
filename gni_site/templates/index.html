@@ -154,9 +154,13 @@
                             <li><a href="{% url 'index' %}#services">Services</a></li>
                             <li><a href="{% url 'events' %}">Events/Conferences</a></li>
                             <!-- <li><a href="#">Blog</a></li> -->
-                            <li><a href="{% url 'new-recruit' %}">Job At Dubai</a><span class="new-tag">New</span></li>
+                            <li><a href="{% url 'new-recruit' %}">Work Abroad</a><span class="new-tag">New</span></li>
                             <li><a href="{% url 'contact-us' %}">Contact</a></li>
+                            {% if user.is_authenticated %}
+                            <li><a href="{% url 'dashboard' %}">Dashboard</a></li>
+                            {% else %}
                             <li><a href="{% url 'login' %}">Login</a></li>
+                            {% endif %}
                         </ul>
                     </div><!-- /.navbar-collapse -->
                 </div> 
@@ -193,10 +197,10 @@
                                         <i class="fa fa-plane"></i>
                                     </div>
                                     <div class="f_item_text">
-                                        <h3>Business Coaching</h3>
+                                        <h3>Visa Support</h3>
                                         <p>
-                                            Experience a one on one coaching sections
-                                            with experts both for young entrepreneurs and business owners.
+                                            We offer one of the best and cheapest Visa Supports in the World 
+                                            with less hastle.
                                         </p>
                                     </div>
                                 </div>

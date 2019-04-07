@@ -1,10 +1,10 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block title %}Jobs At Dubai{% endblock %}
-{% block heading %}Jobs At Dubai {% endblock heading %}
+{% block title %}Jobs Abroad{% endblock %}
+{% block heading %}Jobs Abroad {% endblock heading %}
 
-{%  block breadcrumbs %} <li>Jobs at Dubai</li> {% endblock %}
+{%  block breadcrumbs %} <li>Jobs Abroad</li> {% endblock %}
 
 
 {% block inner-content %}
@@ -64,15 +64,17 @@
    <div class="container">
         <div class="row">
             <div class="col-md-6 col-sm-12">
-                <h3 class="title" style="color: #b54daa;"><strong>WHY WORK IN DUBAI?</strong></h3>
+                <h3 class="title" style="color: #b54daa;"><strong>WHY WORK ABROAD?</strong></h3>
                 <h5 class="job-detail">
-                    As one of the major cities in the United Arab Emirate (UAE), Dubai has so much employment opprtunities for 
-                    any job category. from full professionals to artisans and low level job opportunities. With over <strong>88.5%</strong> of the population of the UAE
+                    As a dream for most people expecially Africans to find a better dream and career goal working and 
+                    schooling abroard, there are nemerous countries today that are currently making that dream very much possible 
+                    especially in the United Arab Emirate (UAE), Turkey and even Canada.
+                    Dubai in the UAE for example, has so much employment opprtunities for any job category. from full professionals to artisans and low level job opportunities. With over <strong>88.5%</strong> of the population of the UAE
                     as working foreigners, the opportunities are increasing by the day and that is made available for those from the African desent. 
                 </h5>
                 <h5 class="job-detail">
                     At <strong>GNI</strong>, we help low, semi and high skilled indivuduals find their dream jobs with decent 
-                    wages in the UAE. We help you get the job, book a remote interview session and help you finalize all negotiations in terms
+                    wages in Turkey, Canada, the UAE and other countries. We help you get the job, book a remote interview session and help you finalize all negotiations in terms
                     of renumerations and bonuses.
                 </h5>
                 <h5 class="job-detail">
@@ -143,7 +145,7 @@
                        are comfortable at your new job. You are introduced to your new employer and we help you get set for your job.
                     </h5>
                     <div style="margin-top: 30px; text-align: center;">
-                        <a class="start" href="#register">Already Registered? Check Your Employment Status </a>
+                        <a class="start" href="{% url 'login' %}">Already Registered? Check Your Employment Status </a>
                     </div>
                 </div>
             </div>
@@ -172,7 +174,8 @@
                             </select>
                         </div>
                         <div class="form-group">
-                            <label for="id_email">Email</label>
+                            <label for="id_email">Email</label><br>
+                            <small>NOTE: This will be your login username and default password. Ensure to change it upon first login</small>
                             <input required type="email" name="email" id="id_email" 
                                         class="form-control sm tip"
                                         placeholder="Enter Your Email e.g example@example.com">

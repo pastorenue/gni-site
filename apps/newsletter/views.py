@@ -1,6 +1,12 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from .models import Newsletter, Recruitment
 from django.contrib import messages
+from django.contrib.auth.models import User
+from django.contrib.auth.forms import PasswordChangeForm
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth import update_session_auth_hash
+from django.contrib.auth import login, authenticate, logout
+
 
 def new_newsletter(request):
     if request.method == "POST":
@@ -28,16 +34,26 @@ def new_recruit(request):
         dob = params.get('dob')
 
         payload = {
-            'full_name': full_name,
             'gender': gender, 
-            'email': email, 
             'phone': phone, 
             'cv': cv, 
         }
         
         try:
-            import pdb; pdb.set_trace()
-            recruit = Recruitment.objects.create(**payload)
+            first_name, last_name = full_name.split(' ')
+            user = User.objects.create_user(last_name = last_name, 
+                                    first_name=first_name, 
+                                    email=email, 
+                                    password=email, 
+                                    username=email)
+            recruit = Recruitment(**payload)
+            recruit.user = user
+            recruit.job_status = 2
+            recruit.save()
+            # Login the user
+            user.backend = 'django.contrib.auth.backends.ModelBackend'
+            login(request, user)
+
             messages.success(request, "Thank you for registering with GNI Job Board. Your credentials is been reviewed. \
                                 You will be notified shortly")
             return redirect("new-recruit")
@@ -45,3 +61,29 @@ def new_recruit(request):
             messages.error(request, e)
             return redirect('new-recruit')
     return render(request, 'dubai_jobs.html', {})
+
+@login_required
+def change_password(request):
+    if request.method == 'POST':
+        form = PasswordChangeForm(request.user, request.POST)
+        if form.is_valid():
+            user = form.save()
+            update_session_auth_hash(request, user)  # Important!
+            messages.success(request, 'Your password was successfully updated!')
+            return redirect('dashboard')
+        else:
+            messages.error(request, 'Please correct the error below.')
+    else:
+        form = PasswordChangeForm(request.user)
+    return render(request, 'password_change.html', {
+        'form': form
+    })
+
+
+@login_required
+def dashboard(request):
+    template_name='dashboard.html'
+    user = request.user
+    recruit = get_object_or_404(Recruitment, user=user)
+    return render(request, template_name, {'recruit': recruit})
+ 
