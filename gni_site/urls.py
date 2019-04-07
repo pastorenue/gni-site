@@ -28,7 +28,7 @@ urlpatterns = [
     url(r'^events-and-conferences$', TemplateView.as_view(template_name="events.html"), name="events"),
     url(r'^jobs-at-dubai$', new_recruit, name="new-recruit"),
     url(r'^contact-us$', TemplateView.as_view(template_name="contact.html"), name="contact-us"),
-    url(r'^login$', TemplateView.as_view(template_name="login.html"), name="login"),
+    url(r'^login$', TemplateView.as_view(template_name="sign_in.html"), name="login"),
     url(r'^president-speech$', TemplateView.as_view(template_name="speech.html"), name="speech"),
     url(r'^newsletters/', include('newsletter.urls', namespace='newsletters')),
     url(r'^contact-us/', include('contacts.urls', namespace='contacts')),
