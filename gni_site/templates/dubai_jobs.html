@@ -1,0 +1,204 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Jobs At Dubai{% endblock %}
+{% block heading %}Jobs At Dubai {% endblock heading %}
+
+{%  block breadcrumbs %} <li>Jobs at Dubai</li> {% endblock %}
+
+
+{% block inner-content %}
+<style>
+.remove-border {
+    box-shadow: none !important;
+}
+.start {
+    font-size: 18px;
+    padding: 6px 25px;
+    border: 2px solid #b54daa;
+    color: #000;
+    border-radius: 25px;
+    text-align: center;
+    transition: all .34s ease-in-out;
+    
+}
+.start:hover {
+    background: #b54daa;
+    color: #fff;
+    box-shadow: 0 1px 8px 0 rgba(0,0,0,0.3);
+}
+.job-detail {
+    text-align: justify; 
+    font-size: 1.3em; 
+    line-height: 28px;
+}
+.btn-submit {
+    padding: 10px 35px;
+    border-radius: 25px;
+    color: #00a885;
+    background: #fff;
+    font-size: 1.3em;
+    transition: all .46s ease-in-out;
+    outline: none;
+    border: none;
+    text-align: center;
+    width: 200px;
+}
+.btn-submit:hover {
+    background: #000;
+    color: #fff;
+}
+.tip {
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding-left: 20px;
+    height: 40px;
+}
+.title {
+  font-size: 1.7em;
+  font-weight: 600;
+
+}
+</style>
+<section class="bg-grey service-tab">
+   <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-sm-12">
+                <h3 class="title" style="color: #b54daa;"><strong>WHY WORK IN DUBAI?</strong></h3>
+                <h5 class="job-detail">
+                    As one of the major cities in the United Arab Emirate (UAE), Dubai has so much employment opprtunities for 
+                    any job category. from full professionals to artisans and low level job opportunities. With over <strong>88.5%</strong> of the population of the UAE
+                    as working foreigners, the opportunities are increasing by the day and that is made available for those from the African desent. 
+                </h5>
+                <h5 class="job-detail">
+                    At <strong>GNI</strong>, we help low, semi and high skilled indivuduals find their dream jobs with decent 
+                    wages in the UAE. We help you get the job, book a remote interview session and help you finalize all negotiations in terms
+                    of renumerations and bonuses.
+                </h5>
+                <h5 class="job-detail">
+                    Its all a Win-Win situation going through GNI for your career upgrade.
+                </h5>
+                <div style="margin-top: 30px; text-align: center;">
+                    <a class="start" href="#register">Let's Get You Started Right Away </a>
+                </div>
+            </div>
+            <div class="col-md-6 col-sm-12 wow fadeInRight" data-wow-duration="2s">
+                <img class="remove-border" src="{% static 'images/job21.png' %}" alt="">
+            </div>
+        </div>
+   </div>
+</section>
+<section class="bg-white service-tab" style="text-align: center; padding: 55px 0;">
+    <h3 style="font-size: 2.5em; color: #00a885;">Here is How it works</h2>
+    <div style="height: 5px; width: 200px; background: #f5f5f5; position: absolute; left: 43%; right: auto; top: 30px;"></div>
+</section>
+<section class="bg-info service-tab">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-sm-12 wow fadeInLeft" data-wow-duration="2s" style="text-align: center;">
+                <img class="remove-border" src="{% static 'images/jobs3.png' %}" alt="">
+            </div>
+            <div class="col-md-6 col-sm-12">
+                <h3 class="title">Resume Review</h3>
+                <h5 class="job-detail">
+                        After your registration, A team of experts review your CV indept and start applying for jobs on your behalf that suits your
+                        skillset until you get hired. Though the time frame for the job is not specific, but you are certain you will
+                        get hired on a job of your choice
+                    </h5>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="bg-grey service-tab">
+    <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-sm-12">
+                    <h3 class="title">Payment and Visa Processing</h3>
+                    <h5 class="job-detail">
+                        Once you are satisfied with the job procured by our experts, We begin the processing of your visa and all other
+                        necessary documents -residency, work permit etc.
+                    </h5>
+                    <h5 class="job-detail">
+                        The charges vary dependent on your skill level. But are assured of value for your money. 
+                        For professionals, the fee covers all costs for Resume review and some other tips offered
+                        before and after the interview process.
+                    </h5>
+                </div>
+                <div class="col-md-6 col-sm-12 wow fadeInRight" data-wow-duration="2s">
+                    <img class="remove-border" src="{% static 'images/jobs1.png' %}" alt="">
+                </div>
+            </div>
+    </div>
+</section>
+<section class="bg-white service-tab">
+    <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-sm-12 wow fadeInRight" data-wow-duration="2s">
+                    <img class="remove-border" src="{% static 'images/job2.png' %}" alt="">
+                </div>
+                <div class="col-md-6 col-sm-12 roomy-70" id="register">
+                    <h3 class="title">Receive Your Appointment Letter in Person</h3>
+                    <h5 class="job-detail">
+                       After your visa is processed, you are welcomed by one of our staff at the airport and make sure you
+                       are comfortable at your new job. You are introduced to your new employer and we help you get set for your job.
+                    </h5>
+                    <div style="margin-top: 30px; text-align: center;">
+                        <a class="start" href="#register">Already Registered? Check Your Employment Status </a>
+                    </div>
+                </div>
+            </div>
+    </div>
+</section>
+<section class="bg-primary service-tab roomy-70">
+    <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-sm-12">
+                    <div style="margin-bottom: 20px;">
+                        <h3 style="font-weight: 600; font-size: 2em; text-align: center; color: #fff;">Let's Get You Started...</h3>
+                        <h5 style="text-align: center; color: #fff;">Complete the form below to begin the Process</h5>
+                    </div>
+                    <form method="POST" enctype="multipart/form-data"action="{% url 'new-recruit' %}">{% csrf_token %}
+                        <div class="form-group">
+                            <label for="id_name">Full Name</label>
+                            <input required type="text" name="f_name" id="id_name" 
+                                        class="form-control sm tip"
+                                        placeholder="Enter Your Full Name e.g Asam Adamu">
+                        </div>
+                        <div class="form-group">
+                            <label for="id_gender">Gender: </label>
+                            <select required class="form-control sm tip" name="gender" id="id_gender">
+                                <option value="F">Female</option>
+                                <option value="M">Male</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="id_email">Email</label>
+                            <input required type="email" name="email" id="id_email" 
+                                        class="form-control sm tip"
+                                        placeholder="Enter Your Email e.g example@example.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="id_phone">Phone Number</label>
+                            <input required type="tel" name="phone" id="id_phone" 
+                                        class="form-control sm tip"
+                                        placeholder="Enter Your Phone Number e.g +234800000001">
+                        </div>
+                        <div class="form-group">
+                            <label for="id_cv">CV & Credentials</label><br>
+                            <small>NOTE: Make sure all your credentials are attached with your CV as a single document.</small>
+                            <input required type="file" name="cv" id="id_cv" 
+                                        class="form-control sm tip">
+                        </div>
+                        <div class="form-group" style="text-align: center;">
+                            <button type="submit" class="btn-submit">Proceed...</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md-6 col-sm-12 wow fadeInRight" data-wow-duration="2s">
+                    <img class="remove-border" src="{% static 'images/job4.png' %}" alt="" style="margin-top: 100px;">
+                </div>
+            </div>
+    </div>
+</section>
+{% endblock inner-content %}
+    

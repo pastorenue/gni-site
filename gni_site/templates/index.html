@@ -26,7 +26,18 @@
         <link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}">
         <link rel="stylesheet" href="{% static 'css/bootsnav.css' %}">
         {% block extracss %}{% endblock %}
-
+        <style> 
+        .new-tag {
+            font-size: 10px; 
+            background: #00a885; 
+            color: #fff;
+            position: absolute; 
+            top: 10px; 
+            right: 5px;
+            padding: 5px;
+            border-radius: 50%;
+        }
+        </style>
         <!-- xsslider slider css -->
 
 
@@ -143,7 +154,9 @@
                             <li><a href="{% url 'index' %}#services">Services</a></li>
                             <li><a href="{% url 'events' %}">Events/Conferences</a></li>
                             <!-- <li><a href="#">Blog</a></li> -->
+                            <li><a href="{% url 'new-recruit' %}">Job At Dubai</a><span class="new-tag">New</span></li>
                             <li><a href="{% url 'contact-us' %}">Contact</a></li>
+                            <li><a href="{% url 'login' %}">Login</a></li>
                         </ul>
                     </div><!-- /.navbar-collapse -->
                 </div> 
@@ -260,13 +273,18 @@
                                     <div class="business_items text-center">
                                         <div class="business_item">
                                             <div class="business_img">
-                                                <img src="{% static 'images/ad_5.jpg' %}" alt="" />
+                                                <img src="{% static 'images/ad_12.jpg' %}" alt="" />
                                             </div>
                                         </div>
 
                                         <div class="business_item">
                                             <div class="business_img">
-                                                <img src="{% static 'images/ad_6.jpg' %}" alt="" />
+                                                <img src="{% static 'images/ad_5.jpg' %}" alt="" />
+                                            </div>
+                                        </div>
+                                        <div class="business_item">
+                                            <div class="business_img">
+                                                <img src="{% static 'images/ad_14.jpg' %}" alt="" />
                                             </div>
                                         </div>
                                     </div>
@@ -381,68 +399,26 @@
                                     </div>
                                 </div>
 
-                                <!-- <div class="item">
+                                <div class="item">
                                     <div class="container">
                                         <div class="row">
                                             <div class="col-sm-3">
                                                 <div class="port_item xs-m-top-30">
                                                     <div class="port_img">
-                                                        <img src="{% static 'images/work-img1.jpg' %}" alt="" />
+                                                        <img src="{% static 'images/visa.jpg' %}" alt="" />
                                                         <div class="port_overlay text-center">
-                                                            <a href="{% static 'images/work-img1.jpg' %}" class="popup-img">+</a>
+                                                            <a href="{% static 'images/visa.jpg' %}" class="popup-img">+</a>
                                                         </div>
                                                     </div>
                                                     <div class="port_caption m-top-20">
-                                                        <h5>Your Work Title</h5>
-                                                        <h6>- Graphic Design</h6>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-3">
-                                                <div class="port_item xs-m-top-30">
-                                                    <div class="port_img">
-                                                        <img src="{% static 'images/work-img2.jpg' %}" alt="" />
-                                                        <div class="port_overlay text-center">
-                                                            <a href="{% static 'images/work-img2.jpg' %}" class="popup-img">+</a>
-                                                        </div>
-                                                    </div>
-                                                    <div class="port_caption m-top-20">
-                                                        <h5>Your Work Title</h5>
-                                                        <h6>- Graphic Design</h6>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-3">
-                                                <div class="port_item xs-m-top-30">
-                                                    <div class="port_img">
-                                                        <img src="{% static 'images/work-img3.jpg' %}" alt="" />
-                                                        <div class="port_overlay text-center">
-                                                            <a href="{% static 'images/work-img3.jpg' %}" class="popup-img">+</a>
-                                                        </div>
-                                                    </div>
-                                                    <div class="port_caption m-top-20">
-                                                        <h5>Your Work Title</h5>
-                                                        <h6>- Graphic Design</h6>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-3">
-                                                <div class="port_item xs-m-top-30">
-                                                    <div class="port_img">
-                                                        <img src="{% static 'images/work-img4.jpg' %}" alt="" />
-                                                        <div class="port_overlay text-center">
-                                                            <a href="{% static 'images/work-img4.jpg' %}" class="popup-img">+</a>
-                                                        </div>
-                                                    </div>
-                                                    <div class="port_caption m-top-20">
-                                                        <h5>Your Work Title</h5>
-                                                        <h6>- Graphic Design</h6>
+                                                        <h5>Visa Services</h5>
+                                                        <h6>- Travel Support</h6>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div> -->
+                                </div>
                             </div>
 
                             <!-- Controls -->

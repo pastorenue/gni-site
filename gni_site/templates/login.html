@@ -1,0 +1,96 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Login{% endblock %}
+{% block heading %}Jobs At Dubai :: Login {% endblock heading %}
+
+{%  block breadcrumbs %} <li><a href="{% url 'new-recruit' %}">Jobs at Dubai</a></li>&raquo; <li>Login</li> {% endblock %}
+
+
+{% block inner-content %}
+<style>
+.remove-border {
+    box-shadow: none !important;
+}
+.start {
+    font-size: 18px;
+    padding: 6px 25px;
+    border: 2px solid #b54daa;
+    color: #000;
+    border-radius: 25px;
+    text-align: center;
+    transition: all .34s ease-in-out;
+    
+}
+.start:hover {
+    background: #b54daa;
+    color: #fff;
+    box-shadow: 0 1px 8px 0 rgba(0,0,0,0.3);
+}
+.job-detail {
+    text-align: justify; 
+    font-size: 1.3em; 
+    line-height: 28px;
+}
+.btn-submit {
+    padding: 10px 35px;
+    border-radius: 25px;
+    color: #00a885;
+    background: #fff;
+    font-size: 1.3em;
+    transition: all .46s ease-in-out;
+    outline: none;
+    border: none;
+    text-align: center;
+    width: 200px;
+}
+.btn-submit:hover {
+    background: #000;
+    color: #fff;
+}
+.tip {
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding-left: 20px;
+    height: 40px;
+}
+.title {
+  font-size: 1.7em;
+  font-weight: 600;
+
+}
+</style>
+<section class="bg-white service-tab roomy-70">
+    <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-sm-12">
+                    <div style="margin-bottom: 20px; margin-top: 50px;">
+                        <h3 style="font-weight: 600; font-size: 2em; text-align: center; color: rgb(27, 161, 110);">Login to Your Status Board</h3>
+                        <h5 style="text-align: center; color: rgb(8, 102, 102);">...The fun of working abroad starts here</h5>
+                    </div>
+                    <form method="POST" enctype="multipart/form-data"action="{% url 'new-recruit' %}">{% csrf_token %}
+                        <div class="form-group">
+                            <label for="id_name">Full Name</label>
+                            <input required type="text" name="f_name" id="id_name" 
+                                        class="form-control sm tip"
+                                        placeholder="Enter Your Full Name e.g Asam Adamu">
+                        </div>
+                        <div class="form-group">
+                            <label for="id_email">Email</label>
+                            <input required type="email" name="email" id="id_email" 
+                                        class="form-control sm tip"
+                                        placeholder="Enter Your Email e.g example@example.com">
+                        </div>
+                        <div class="form-group" style="text-align: center;">
+                            <button type="submit" class="btn-submit">Proceed...</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md-6 col-sm-12 wow fadeInRight" data-wow-duration="2s">
+                    <img class="remove-border" src="{% static 'images/job21.png' %}" alt="" style="">
+                </div>
+            </div>
+    </div>
+</section>
+{% endblock inner-content %}
+    
