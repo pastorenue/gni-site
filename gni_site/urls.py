@@ -37,7 +37,7 @@ urlpatterns = [
     url(r'^newsletters/', include('newsletter.urls', namespace='newsletters')),
     url(r'^contact-us/', include('contacts.urls', namespace='contacts')),
 ]+static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
-
+urlpatterns+=static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 urlpatterns += [
     url(r'^auth/login$', auth_views.LoginView.as_view(template_name='sign_in.html'), name='login'),
