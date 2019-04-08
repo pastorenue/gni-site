@@ -26,7 +26,8 @@ def new_newsletter(request):
 def new_recruit(request):
     if request.method == 'POST':
         params = request.POST
-        full_name = params.get('f_name')
+        first_name = params.get('f_name')
+        last_name = params.get('l_name')
         gender = params.get('gender')
         email = params.get('email')
         phone = params.get('phone')
@@ -40,7 +41,6 @@ def new_recruit(request):
         }
         
         try:
-            first_name, last_name = full_name.split(' ')
             user = User.objects.create_user(last_name = last_name, 
                                     first_name=first_name, 
                                     email=email, 

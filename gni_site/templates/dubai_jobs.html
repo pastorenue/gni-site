@@ -161,10 +161,16 @@
                     </div>
                     <form method="POST" enctype="multipart/form-data"action="{% url 'new-recruit' %}">{% csrf_token %}
                         <div class="form-group">
-                            <label for="id_name">Full Name</label>
-                            <input required type="text" name="f_name" id="id_name" 
+                            <label for="id_name">First Name</label>
+                            <input required type="text" name="f_name" id="id_f_name" 
                                         class="form-control sm tip"
-                                        placeholder="Enter Your Full Name e.g Asam Adamu">
+                                        placeholder="Enter Your First Name e.g Asam ">
+                        </div>
+                        <div class="form-group">
+                            <label for="id_name">Last Name</label>
+                            <input required type="text" name="l_name" id="id_l_name" 
+                                        class="form-control sm tip"
+                                        placeholder="Enter Your Last Name e.g Adamu">
                         </div>
                         <div class="form-group">
                             <label for="id_gender">Gender: </label>
